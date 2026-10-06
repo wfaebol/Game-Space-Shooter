@@ -1,23 +1,14 @@
 fileFormatVersion: 2
-guid: d7602b5e04745f74b8a23ea2ecaf9550
+guid: d967cccf1642aa1419174612b92c3feb
 AssetOrigin:
   serializedVersion: 1
-  productId: 133395
-  packageName: 2D Pixel Spaceships (2 Small Ships + Explosions)
+  productId: 326914
+  packageName: Tiny Space Ships
   packageVersion: 1.0
-  assetPath: Assets/2D Pixel Spaceships (2 Small Ships + Explosions)/Sprites/fireball-flames.png
-  uploadId: 279526
+  assetPath: Assets/Tiny Ships/Art/tinyShip14.png
+  uploadId: 776339
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: fireball
-  - first:
-      213: 21300002
-    second: flame-small
-  - first:
-      213: 21300004
-    second: flame-big
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -79,16 +70,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,7 +92,20 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,10 +115,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,30 +126,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fireball
+      name: tinyShip14_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 53
-        width: 11
-        height: 11
+        y: 32
+        width: 52
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,52 +145,162 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5da8494accc7cb2409094ddf485a932a
-      internalID: 21300000
+      spriteID: 46b40d7aa0a5f0c40b6a932d1da954cc
+      internalID: 296169839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flame-small
+      name: tinyShip14_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 33
-        width: 16
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 53
+        y: 32
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ce608b460ff4ba488a317284fcb5a09
-      internalID: 21300002
+      spriteID: f102de25641da094e94e13dc9c6ccb45
+      internalID: 1818040394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flame-big
+      name: tinyShip14_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 3
-        width: 32
-        height: 61
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 106
+        y: 32
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fab6c09d9a72e1241bf16fc83513f32e
-      internalID: 21300004
+      spriteID: 7f057eeac0c1512458a20966727e9369
+      internalID: 543533025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyShip14_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 32
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6fa6eb6f0e1184299005b28b2df42e
+      internalID: 507046346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyShip14_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8da063cc53bc1479f22c6b1eac9733
+      internalID: 563339754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyShip14_6
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4809dd190b2a3e646930c01774a66b6c
+      internalID: 1860318333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyShip14_7
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0abe96432e8c4468d072884d6187d5
+      internalID: 1095750198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyShip14_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f36eed5ba77eb4e8d321d5d89d71f4
+      internalID: -503890859
       vertices: []
       indices: 
       edges: []
@@ -208,7 +309,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2c370fe215ad54a45b0967eb7cf9ec30
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -218,9 +319,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fireball: 21300000
-      flame-big: 21300004
-      flame-small: 21300002
+      tinyShip14_0: 296169839
+      tinyShip14_1: 1818040394
+      tinyShip14_2: 543533025
+      tinyShip14_3: 507046346
+      tinyShip14_4: -503890859
+      tinyShip14_5: 563339754
+      tinyShip14_6: 1860318333
+      tinyShip14_7: 1095750198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
