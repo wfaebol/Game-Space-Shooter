@@ -56,7 +56,7 @@ public class Shooter : MonoBehaviour
         while(true)
         {
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-            projectile.transform.rotation = transform.rotation;
+            projectile.transform.rotation = transform.rotation * Quaternion.Euler(0, 0, -180);
             Rigidbody2D projectileRB = projectile.GetComponent<Rigidbody2D>();
             projectileRB.linearVelocity = transform.up * projectileSpeed;
             audioShooting.PlayShootingSFX();
