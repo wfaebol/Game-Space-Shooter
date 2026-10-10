@@ -19,11 +19,5 @@ public class Bullet : MonoBehaviour
         transform.position = newPosition;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision != null)
-        {
-            Destroy(gameObject);
-        }
-    }
+    private void OnTriggerEnter2D(Collider2D collision) => Destroy(gameObject);
 }
