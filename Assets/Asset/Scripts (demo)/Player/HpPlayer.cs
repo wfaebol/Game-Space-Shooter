@@ -7,12 +7,15 @@ public class HpPlayer : MonoBehaviour
     [SerializeField] GameObject effectDie;
     [SerializeField] float timeEffect = 1.0f;
     [SerializeField] float timeWaitDie = 5.0f;
+    [SerializeField] CameraShake cameraShake;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy") )
         {
+            cameraShake.Play();
+
             var dame = collision.GetComponent<DameEnemy>();
 
             if(hp - dame.TakeDame() <= 0)
