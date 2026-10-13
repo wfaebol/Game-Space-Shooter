@@ -5,13 +5,17 @@ public class HpEnemy : MonoBehaviour
     [SerializeField] GameObject effectDie;
     [SerializeField] float timeEffect = 1.0f;
     [SerializeField] int hp = 100;
+    [SerializeField] int score = 100;
+
+    ScoreKeeper addScore;
 
 
     DamePlayer takeDame;
 
     private void Start()
     {
-        takeDame = FindFirstObjectByType<DamePlayer>(); 
+        takeDame = FindFirstObjectByType<DamePlayer>();
+        addScore = FindFirstObjectByType<ScoreKeeper>();
     }
 
 
@@ -24,6 +28,7 @@ public class HpEnemy : MonoBehaviour
 
         else
         {
+            addScore.SetCurrentScore(score);
             var effect = Instantiate(effectDie, transform.position, transform.rotation);
             Destroy(effect, timeEffect);
             Destroy(gameObject);

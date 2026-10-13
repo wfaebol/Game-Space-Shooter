@@ -19,7 +19,7 @@ public class HpPlayer : MonoBehaviour
             {
                 hp = 0;
                 var effect = Instantiate(effectDie,transform.position, transform.rotation);
-                Destroy(effect, 4);
+                Destroy(effect, timeEffect);
                 StartCoroutine(WaitDie(timeWaitDie));
                 Destroy(gameObject);
             }
