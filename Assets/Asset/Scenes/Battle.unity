@@ -5796,7 +5796,7 @@ Transform:
   m_GameObject: {fileID: 988964691}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: -3.92, z: 0}
+  m_LocalPosition: {x: 0, y: -1.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5962,9 +5962,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3db6b93765a8ba4f903ad23b4350b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowDame: 35
   normalDame: 50
   highDame: 100
+  timeItem: 5
 --- !u!114 &988964698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5977,11 +5977,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7713d6acd2b556041a67cb2effd04773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hpMax: 100
   effectDie: {fileID: 3415459744270851148, guid: 2bddf086a3fcf2d4c9e9a4517252e614, type: 3}
   timeEffect: 0.5
   timeWaitDie: 5
   cameraShake: {fileID: 440781107}
+  hpHeal: 50
 --- !u!1 &1036254125
 GameObject:
   m_ObjectHideFlags: 0
@@ -6106,7 +6107,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3883620450873487395, guid: eff1cabe3c3c9ed4bb476a61716b247b, type: 3}
-  timeWait: 1
+  timeWaitLow: 0.1
+  timeWaitNormal: 1
+  timeItem: 5
 --- !u!1 &1137862529
 GameObject:
   m_ObjectHideFlags: 0

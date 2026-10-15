@@ -19,5 +19,11 @@ public class Bullet : MonoBehaviour
         transform.position = newPosition;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) => Destroy(gameObject);
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
