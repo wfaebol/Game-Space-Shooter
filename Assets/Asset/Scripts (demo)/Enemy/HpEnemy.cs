@@ -7,8 +7,9 @@ public class HpEnemy : MonoBehaviour
     [SerializeField] int hp = 100;
     [SerializeField] int score = 100;
 
-    ScoreKeeper addScore;
+    ParticleSystem particle;
 
+    ScoreKeeper addScore;
 
     DamePlayer takeDame;
 
@@ -16,6 +17,7 @@ public class HpEnemy : MonoBehaviour
     {
         takeDame = FindFirstObjectByType<DamePlayer>();
         addScore = FindFirstObjectByType<ScoreKeeper>();
+        particle = GetComponent<ParticleSystem>();
     }
 
 
@@ -23,6 +25,7 @@ public class HpEnemy : MonoBehaviour
     {
         if(hp - takeDame.TakeDame() > 0)
         {
+            particle.Play();
             hp -= takeDame.TakeDame();
         }
 
