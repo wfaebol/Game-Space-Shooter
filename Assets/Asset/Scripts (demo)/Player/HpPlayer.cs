@@ -1,20 +1,27 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HpPlayer : MonoBehaviour
 {
     [SerializeField] int hpMax = 100;
     [SerializeField] GameObject effectDie;
     [SerializeField] float timeEffect = 1.0f;
-    [SerializeField] float timeWaitDie = 5.0f;
     [SerializeField] CameraShake cameraShake;
     [SerializeField] int hpHeal = 50;
 
     int hp;
+    LevelManager levelManager;
+    
 
     private void Awake()
     {
         hp = hpMax;
+    }
+
+    private void Start()
+    {
+        levelManager = FindFirstObjectByType<LevelManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,8 +37,8 @@ public class HpPlayer : MonoBehaviour
                 hp = 0;
                 var effect = Instantiate(effectDie,transform.position, transform.rotation);
                 Destroy(effect, timeEffect);
-                StartCoroutine(WaitDie(timeWaitDie));
                 Destroy(gameObject);
+                levelManager.GameOver();
             }
 
             else
@@ -39,11 +46,6 @@ public class HpPlayer : MonoBehaviour
                 hp -= dame.TakeDame();
             }
         }
-    }
-
-    IEnumerator WaitDie(float time)
-    {
-        yield return new WaitForSeconds(time);
     }
 
     public int GetHp()
