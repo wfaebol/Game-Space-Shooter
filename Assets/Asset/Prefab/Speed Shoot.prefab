@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1602396180856174543}
   - component: {fileID: 5662388834568571379}
   - component: {fileID: 577470500627867932}
+  - component: {fileID: -3415726889960892133}
   m_Layer: 8
   m_Name: Speed Shoot
   m_TagString: Untagged
@@ -137,3 +138,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dea9c63cfe50464da35e273d10a2362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3415726889960892133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366289457029918521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f958a2245fbdd1242bcce716bfb328e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movespeed: -1

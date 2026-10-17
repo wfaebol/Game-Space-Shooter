@@ -8,8 +8,11 @@ public class DemoShooter : MonoBehaviour
     [SerializeField] float timeWaitNormal = 1.0f;
     [SerializeField] float timeItem = 5.0f;
 
+
+    Coroutine shootCoroutine;
     float timeLate = -10;
     float timeWait;
+
 
     void Awake()
     {
@@ -27,7 +30,12 @@ public class DemoShooter : MonoBehaviour
 
     public void GetItem()
     {
-        StartCoroutine(ItemShootSpeed());
+        if(shootCoroutine != null)
+        {
+            StopCoroutine(shootCoroutine);
+        }
+
+        shootCoroutine = StartCoroutine(ItemShootSpeed());
     }
 
 
@@ -36,5 +44,6 @@ public class DemoShooter : MonoBehaviour
         timeWait = timeWaitLow;
         yield return new WaitForSeconds(timeItem);
         timeWait = timeWaitNormal;
+        shootCoroutine = null;
     }
 }

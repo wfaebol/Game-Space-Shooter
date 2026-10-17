@@ -502,7 +502,7 @@ Transform:
   m_GameObject: {fileID: 536823857}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 109.43755, y: 221.16127, z: -0.1118286}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5759,7 +5759,57 @@ Transform:
   m_GameObject: {fileID: 854699423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 121.18884, y: 146.00368, z: 0.90942377}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &891253208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 891253210}
+  - component: {fileID: 891253209}
+  m_Layer: 0
+  m_Name: IteamSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &891253209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891253208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf06ee04a7706f488b600fa645bca62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab:
+  - {fileID: 2292592200300678750, guid: 9d190254c3e641a4b89d6f576840248d, type: 3}
+  - {fileID: 1642350767466589854, guid: 026fb540414ec1e4091a8ed65a262d40, type: 3}
+  - {fileID: 1366289457029918521, guid: 59dff046e4787d54c83cdd4e3784c179, type: 3}
+  timeSpawn: 1
+  offsetSpawn: 0.2
+--- !u!4 &891253210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891253208}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6825,9 +6875,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 440781105}
   - {fileID: 1036254128}
+  - {fileID: 854699425}
+  - {fileID: 891253210}
   - {fileID: 536823859}
   - {fileID: 2105954729}
   - {fileID: 1978929062}
-  - {fileID: 854699425}
   - {fileID: 988964692}
   - {fileID: 797191212}

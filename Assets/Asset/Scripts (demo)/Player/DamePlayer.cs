@@ -8,6 +8,7 @@ public class DamePlayer : MonoBehaviour
     [SerializeField] float timeItem = 5f;
 
     int simpleDame;
+    Coroutine DameCoroutine;
 
 
     private void Awake()
@@ -23,7 +24,12 @@ public class DamePlayer : MonoBehaviour
 
     public void GetItem()
     {
-        StartCoroutine(AddDame());
+        if(DameCoroutine != null)
+        {
+            StopCoroutine(DameCoroutine);
+        }
+
+        DameCoroutine = StartCoroutine(AddDame());
     }
 
     IEnumerator AddDame()
@@ -31,5 +37,6 @@ public class DamePlayer : MonoBehaviour
         simpleDame = highDame;
         yield return new WaitForSeconds(timeItem);
         simpleDame = normalDame;
+        DameCoroutine = null;
     }
 }
