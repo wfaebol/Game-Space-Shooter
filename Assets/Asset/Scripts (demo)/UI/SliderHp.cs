@@ -16,6 +16,5 @@ public class SliderHp : MonoBehaviour
     void Update()
     {
         simpleHp.value = hpPlayer.GetHp();
-        Debug.Log(Time.time);
     }
 }

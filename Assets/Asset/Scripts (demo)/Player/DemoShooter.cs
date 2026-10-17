@@ -7,6 +7,7 @@ public class DemoShooter : MonoBehaviour
     [SerializeField] float timeWaitLow = 0.1f;
     [SerializeField] float timeWaitNormal = 1.0f;
     [SerializeField] float timeItem = 5.0f;
+    [SerializeField] Transform bulletContainer;
 
 
     Coroutine shootCoroutine;
@@ -23,7 +24,7 @@ public class DemoShooter : MonoBehaviour
     {
         if(Time.time - timeLate > timeWait)
         {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Instantiate(bulletPrefab, transform.position, transform.rotation, bulletContainer);
             timeLate = Time.time;
         }
     }
