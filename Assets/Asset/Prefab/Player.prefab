@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94749e3535a6b144a9f6ce3dd160105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 2.4
   leftBound: 0.3
   rightBound: 0.3
   upBound: 0.3
@@ -215,7 +215,6 @@ MonoBehaviour:
   hpMax: 100
   effectDie: {fileID: 3415459744270851148, guid: 2bddf086a3fcf2d4c9e9a4517252e614, type: 3}
   timeEffect: 0.5
-  timeWaitDie: 5
   cameraShake: {fileID: 0}
   hpHeal: 50
 --- !u!1 &5174284458811307507
@@ -353,6 +352,7 @@ MonoBehaviour:
   timeWaitLow: 0.1
   timeWaitNormal: 1
   timeItem: 5
+  bulletContainer: {fileID: 0}
 --- !u!1 &8582749319679855553
 GameObject:
   m_ObjectHideFlags: 0

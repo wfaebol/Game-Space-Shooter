@@ -12,12 +12,15 @@ public class HpEnemy : MonoBehaviour
     ScoreKeeper addScore;
 
     DamePlayer takeDame;
+    AudioManager audioManager;
+
 
     private void Start()
     {
         takeDame = FindFirstObjectByType<DamePlayer>();
         addScore = FindFirstObjectByType<ScoreKeeper>();
         particle = GetComponent<ParticleSystem>();
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
 
 
@@ -26,6 +29,7 @@ public class HpEnemy : MonoBehaviour
         if(hp - takeDame.TakeDame() > 0)
         {
             particle.Play();
+            audioManager.PlayTakeDameSFX();
             hp -= takeDame.TakeDame();
         }
 

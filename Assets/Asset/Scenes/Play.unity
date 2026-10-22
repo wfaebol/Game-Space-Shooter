@@ -1307,9 +1307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b183d105f072d534d963b9536892a91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingAudio: {fileID: 8300000, guid: 93f85a11aa8d92c4a95236e6b740d25a, type: 3}
+  shootingAudio: {fileID: 8300000, guid: 14774b2620b9b2d419ebc789bdf94c9e, type: 3}
   shootingVolume: 1
-  takeDameAudio: {fileID: 8300000, guid: c189303b8f9718e40aba6ec080f81296, type: 3}
+  takeDameAudio: {fileID: 8300000, guid: 586b0ce93a121ad4ba50477dc2785981, type: 3}
   takeDameVolume: 1
 --- !u!4 &1990770425942617555
 Transform:
@@ -1391,13 +1391,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 562736765882397362, guid: 37c8318704031024eb2667a0b3f74d59, type: 3}
+      propertyPath: bulletContainer
+      value: 
+      objectReference: {fileID: 1282273349}
     - target: {fileID: 4468068757694079741, guid: 37c8318704031024eb2667a0b3f74d59, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776784803362491311, guid: 37c8318704031024eb2667a0b3f74d59, type: 3}
-      propertyPath: moveSpeed
-      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 9049929693796433503, guid: 37c8318704031024eb2667a0b3f74d59, type: 3}
       propertyPath: m_LocalPosition.x

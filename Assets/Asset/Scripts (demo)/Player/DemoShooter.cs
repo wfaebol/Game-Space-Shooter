@@ -13,11 +13,13 @@ public class DemoShooter : MonoBehaviour
     Coroutine shootCoroutine;
     float timeLate = -10;
     float timeWait;
+    AudioManager audioManager;
 
 
     void Awake()
     {
         timeWait = timeWaitNormal;
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
 
     void Update()
@@ -25,6 +27,7 @@ public class DemoShooter : MonoBehaviour
         if(Time.time - timeLate > timeWait)
         {
             Instantiate(bulletPrefab, transform.position, transform.rotation, bulletContainer);
+            audioManager.PlayShootingSFX();
             timeLate = Time.time;
         }
     }
