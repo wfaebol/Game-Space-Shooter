@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.9286032, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1225,6 +1225,10 @@ PrefabInstance:
     - target: {fileID: 3881087803549984437, guid: ec536a7718376554185e4a856d5ae230, type: 3}
       propertyPath: m_Name
       value: Variable Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881087803549984437, guid: ec536a7718376554185e4a856d5ae230, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3881087803549984439, guid: ec536a7718376554185e4a856d5ae230, type: 3}
       propertyPath: joystickType
@@ -1525,6 +1529,14 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4776784803362491311, guid: 37c8318704031024eb2667a0b3f74d59, type: 3}
+      propertyPath: touchPress
+      value: 
+      objectReference: {fileID: -9073814163858637046, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    - target: {fileID: 4776784803362491311, guid: 37c8318704031024eb2667a0b3f74d59, type: 3}
+      propertyPath: touchPosition
+      value: 
+      objectReference: {fileID: 6304490386133550169, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     - target: {fileID: 9049929693796433503, guid: 37c8318704031024eb2667a0b3f74d59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

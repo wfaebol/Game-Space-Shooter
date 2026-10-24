@@ -11,16 +11,50 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float upBound;
     [SerializeField] float downBound;
     [SerializeField] VariableJoystick joystick;
+    [SerializeField] InputActionReference touchPress;
+    [SerializeField] InputActionReference touchPosition;
 
 
-    Rigidbody2D rb;
     Vector3 minPos;
     Vector3 maxPos;
+    Camera mainCamera;
+    bool isTouching;
+
+    private void Awake()
+    {
+        mainCamera = Camera.main;
+    }
+
+    private void OnEnable()
+    {
+        if (touchPress == null || touchPosition == null)
+            return;
+
+        touchPress.action.Enable();
+        touchPosition.action.Enable();
+
+        touchPress.action.started += OnTouchStarted;
+        touchPress.action.canceled += OnTouchCanceled;
+    }
+
+    private void OnDisable()
+    {
+        if(touchPress != null)
+        {
+            touchPress.action.started -= OnTouchStarted;
+            touchPress.action.canceled -= OnTouchCanceled;
+            touchPress.action.Disable();
+        }
+
+        if (touchPosition != null)
+            touchPosition.action.Disable();
+
+        isTouching = false;
+    }
 
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         InitBounds();
     }
 
@@ -28,6 +62,11 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
     }
+
+    void OnTouchStarted(InputAction.CallbackContext context) => isTouching = true;
+
+    void OnTouchCanceled(InputAction.CallbackContext context) => isTouching = false;
+
 
     void InitBounds()
     {
@@ -39,11 +78,19 @@ public class PlayerController : MonoBehaviour
 
     void MovePlayer()
     {
-        Vector3 direction = Vector3.up * joystick.Vertical + Vector3.right * joystick.Horizontal;
-        Vector3 positionPlayer = transform.position + direction * moveSpeed * Time.deltaTime;
-        positionPlayer.x = Mathf.Clamp(positionPlayer.x, minPos.x + leftBound, maxPos.x - rightBound);
-        positionPlayer.y = Mathf.Clamp(positionPlayer.y, minPos.y + downBound, maxPos.y - upBound);
+        if(!isTouching || mainCamera == null || touchPosition == null) return;
 
-        transform.position = positionPlayer;
+        Vector2 screenPosition = touchPosition.action.ReadValue<Vector2>();
+
+        float zCamera = Mathf.Abs(mainCamera.transform.position.z - transform.position.z);
+
+        Vector3 targetPosition = mainCamera.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, zCamera));
+
+        targetPosition.z = transform.position.z;
+
+        targetPosition.x = Mathf.Clamp(targetPosition.x, minPos.x + leftBound, maxPos.x - rightBound);
+        targetPosition.y = Mathf.Clamp(targetPosition.y, minPos.y + downBound, maxPos.y - upBound);
+
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
     }
 }
