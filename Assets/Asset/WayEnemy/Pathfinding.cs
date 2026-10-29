@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
 {
-    EnemySpawn enemySpawn;
+    EnemySpawn_Wave enemySpawn;
     WaveConfigSO waveConfig;
     Transform[] waypoints;
     int waypointIndex = 0;
@@ -10,7 +10,7 @@ public class Pathfinding : MonoBehaviour
 
     void Start()
     {
-        enemySpawn = FindFirstObjectByType<EnemySpawn>();
+        enemySpawn = FindFirstObjectByType<EnemySpawn_Wave>();
         waveConfig = enemySpawn.GetCurrentWave();
         waypoints = waveConfig.GetWaypoints();
         transform.position = waveConfig.GetStartingWaypoint().position;

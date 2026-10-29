@@ -2,7 +2,7 @@ using System.Collections;
 using System.Security;
 using UnityEngine;
 
-public class EnemySpawn : MonoBehaviour
+public class EnemySpawn_Wave : MonoBehaviour
 {
     [SerializeField] WaveConfigSO[] waveConfigs;
     [SerializeField] float timeBetween = 2f;

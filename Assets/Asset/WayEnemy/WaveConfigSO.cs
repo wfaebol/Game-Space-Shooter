@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Linq;
 
 [CreateAssetMenu(fileName = "WaveConfigSO", menuName = "New Wave")]
 
